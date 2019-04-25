@@ -8,3 +8,7 @@ spring:
     name: order-provider
 server:
   port: 8083
+#  为feign添加回退方法
+feign:
+  hystrix:
+    enabled: true
