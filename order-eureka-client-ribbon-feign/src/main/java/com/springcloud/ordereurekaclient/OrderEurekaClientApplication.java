@@ -10,7 +10,6 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableFeignClients
-@ComponentScan
 public class OrderEurekaClientApplication {
 
 	//方法注解 实例化一个Bean并使用该方法的名称命名。 <==>  RestTemplate restTemplate = new RestTemplate();
