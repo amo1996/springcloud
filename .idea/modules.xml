@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order-eureka-client/order-eureka-client.iml" filepath="$PROJECT_DIR$/order-eureka-client/order-eureka-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order-eureka-client-ribbon/order-eureka-client-ribbon.iml" filepath="$PROJECT_DIR$/order-eureka-client-ribbon/order-eureka-client-ribbon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order-eureka-client-ribbon-feign/order-eureka-client-ribbon-feign.iml" filepath="$PROJECT_DIR$/order-eureka-client-ribbon-feign/order-eureka-client-ribbon-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud.iml" filepath="$PROJECT_DIR$/springcloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-eureka-client/user-eureka-client.iml" filepath="$PROJECT_DIR$/user-eureka-client/user-eureka-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-eureka-client-ribbon/user-eureka-client-ribbon.iml" filepath="$PROJECT_DIR$/user-eureka-client-ribbon/user-eureka-client-ribbon.iml" />
+    </modules>
+  </component>
+</project>
