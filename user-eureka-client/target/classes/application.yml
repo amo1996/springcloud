@@ -30,5 +30,5 @@ info.app.name: spring-cloud-actuator
 info:
   app:
     encoding: UTF-8
-    java: 1.8.0_191
-info.app.target: 1.8.0_191
+    java: 1.8.0_181
+info.app.target: 1.8.0_181
