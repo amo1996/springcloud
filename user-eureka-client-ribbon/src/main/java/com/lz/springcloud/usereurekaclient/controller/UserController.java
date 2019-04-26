@@ -19,5 +19,9 @@ public class UserController {
         User user = userDao.getUserById(id);
          return user;
     }
+    @GetMapping("/hello")
+    public String getHello(){
+        return "hello,user-provider";
+    }
 
 }

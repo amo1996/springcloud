@@ -13,6 +13,7 @@
         <module name="order-eureka-client-ribbon" />
         <module name="order-eureka-client-ribbon-feign" />
         <module name="order-eureka-client-ribbon-feign-hystrix-dashboard" />
+        <module name="simple-eureka-zuul" />
         <module name="springcloud" />
         <module name="user-eureka-client" />
         <module name="user-eureka-client-ribbon" />
@@ -26,6 +27,7 @@
       <module name="order-eureka-client-ribbon" target="1.8" />
       <module name="order-eureka-client-ribbon-feign" target="1.8" />
       <module name="order-eureka-client-ribbon-feign-hystrix-dashboard" target="1.8" />
+      <module name="simple-eureka-zuul" target="1.8" />
       <module name="springcloud" target="1.8" />
       <module name="user-eureka-client" target="1.8" />
       <module name="user-eureka-client-ribbon" target="1.8" />

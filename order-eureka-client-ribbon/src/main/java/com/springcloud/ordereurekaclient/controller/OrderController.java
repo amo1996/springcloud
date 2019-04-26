@@ -33,6 +33,7 @@ public class OrderController {
         return this.restTemplate.getForObject("http://user-provider/"+id,User.class);
     }
 
+
    @GetMapping("/log-user-instance")
     public void logUserInstance(){
         ServiceInstance choose = this.loadBalancerClient.choose("user-provider");

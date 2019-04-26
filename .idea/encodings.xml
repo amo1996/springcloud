@@ -10,6 +10,7 @@
     <file url="file://$PROJECT_DIR$/order-eureka-client-ribbon" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/order-eureka-client-ribbon-feign" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/order-eureka-client-ribbon-feign-hystrix-dashboard" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/simple-eureka-zuul" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/user-eureka-client" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/user-eureka-client-ribbon" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
