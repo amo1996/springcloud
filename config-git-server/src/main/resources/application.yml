@@ -15,7 +15,20 @@ spring:
           username: lzlz1996@126.com
 #            输入github的密码
           password: abc456lnm
+  rabbitmq:
+    port:
+    host:
+    username:
+    password:
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+
+#spring boot 2.x 为了安全默认只开放了info 和 health 其他端点需要手动开启
+#spring boot 1.5 之后是提供了 关闭 安全的属性，但是 2.x里面已经过时了 management.security.enabled=false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh

@@ -4,9 +4,19 @@ server:
 spring:
   application:
     name: config-client
+#    å¼€å¯æ¶ˆæ¯è¿½æº¯/è·Ÿè¸ª
+  cloud:
+    bus:
+      trace:
+        enabled: true
+  rabbitmq:
+    host:
+    port:
+    username:
+    password:
 
-#spring boot 2.x ÎªÁË°²È«Ä¬ÈÏÖ»¿ª·ÅÁËinfo ºÍ health ÆäËû¶ËµãĞèÒªÊÖ¶¯¿ªÆô
-#spring boot 1.5 Ö®ºóÊÇÌá¹©ÁË ¹Ø±Õ °²È«µÄÊôĞÔ£¬µ«ÊÇ 2.xÀïÃæÒÑ¾­¹ıÊ±ÁË management.security.enabled=false
+#spring boot 2.x ä¸ºäº†å®‰å…¨é»˜è®¤åªå¼€æ”¾äº†info å’Œ health å…¶ä»–ç«¯ç‚¹éœ€è¦æ‰‹åŠ¨å¼€å¯
+#spring boot 1.5 ä¹‹åæ˜¯æä¾›äº† å…³é—­ å®‰å…¨çš„å±æ€§ï¼Œä½†æ˜¯ 2.xé‡Œé¢å·²ç»è¿‡æ—¶äº† management.security.enabled=false
 management:
   endpoints:
     web:

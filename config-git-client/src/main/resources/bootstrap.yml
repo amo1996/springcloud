@@ -5,5 +5,16 @@ spring:
     config:
       name: neo-config
       profile: dev
-      uri: http://localhost:8091
+#由于之后改成了从eureka 获取 就不用这个直接配置的uri路径了
+#      uri: http://localhost:8091
       label: master
+#      开启Config服务发现支持
+      discovery:
+        enabled: true
+#        指定server端的name,也就是config-server端spring.application.name的值
+        service-id: config-server
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
