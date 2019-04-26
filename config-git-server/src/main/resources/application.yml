@@ -1,0 +1,17 @@
+
+server:
+  port: 8091
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+        #          配置文件所在的仓库地址
+         uri: https://github.com/amo1996/springcloud/
+#         配置文件相对仓库的路径 多个用 , 隔开
+          search-paths: config-repo
+#          github的账号
+          username: lzlz1996@126.com
+#          password:  输入github的密码
