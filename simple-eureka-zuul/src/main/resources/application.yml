@@ -1,0 +1,22 @@
+
+server:
+  port: 8888
+spring:
+  application:
+    name: eureka-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+zuul:
+  routes:
+    userRoute:
+     path: /user/**
+     serverId: user-provider
+
+#zuul:
+#  routes:
+#    simple:
+#      path: /it/**
+#      url: http://www.baidu.com
+
