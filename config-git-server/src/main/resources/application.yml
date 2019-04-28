@@ -14,7 +14,7 @@ spring:
 #          github的账号
           username: lzlz1996@126.com
 #            输入github的密码
-          password: abc456lnm
+          password: *********
   rabbitmq:
     port:
     host:
