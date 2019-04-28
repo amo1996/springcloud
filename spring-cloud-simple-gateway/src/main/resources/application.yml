@@ -12,6 +12,7 @@ spring:
       discovery:
         locator:
           enabled: true
+
 # 没有配置路由规则会默认根据serviceId 创建路由
 # 现在eureka 上面有一个 USER-PROVIDER 的服务
 # 访问localhost:8000/USER-PROVIDER/hello  会访问  USER-PROVIDER 的hello 接口
@@ -26,15 +27,25 @@ spring:
 #当路由配置中 uri 所用的协议为 lb 时（以uri: lb://user-provider为例）
 #gateway 将使用 LoadBalancerClient 把 user-provider
 #通过 eureka 解析为实际的主机和端口，并进行负载均衡。
+#      routes:
+#        - id: add_request_parameter_filters
+##          uri: http://localhost:8082
+##         uri: lb://应用服务名(serviceId)
+#          uri: lb://user-provider
+#          filters:
+#          - AddRequestParameter=name,lz
+#          predicates:
+#          - Method=GET
+#-------------------------
+# 下面这个配置的意思是截取符合/name/...路径
+# localhost:8000/name/xxx/yyy  跳转至localhost:8082/yyy  截取路径节数由配置StripPrefix 定义
       routes:
-        - id: add_request_parameter_filters
-#          uri: http://localhost:8082
-#         uri: lb://应用服务名(serviceId)
-          uri: lb://user-provider
-          filters:
-          - AddRequestParameter=name,lz
-          predicates:
-          - Method=GET
+      - id: prefixpath_route
+        uri: http://localhost:8082
+        predicates:
+             - Path=/name/**
+        filters:
+             - StripPrefix=2
   application:
     name: cloud-gateway
 logging:
