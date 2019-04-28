@@ -24,4 +24,8 @@ public class UserController {
         return "hello,user-provider";
     }
 
+    @GetMapping("/addRequest")
+    public String addRequestParameterByGateWay(String name){
+        return "hello "+name;
+    }
 }

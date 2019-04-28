@@ -14,6 +14,7 @@
         <option value="$PROJECT_DIR$/config-git-server/pom.xml" />
         <option value="$PROJECT_DIR$/config-git-client/pom.xml" />
         <option value="$PROJECT_DIR$/simple-eureka-zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-simple-gateway/pom.xml" />
       </list>
     </option>
   </component>

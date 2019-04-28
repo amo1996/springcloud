@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/order-eureka-client-ribbon-feign/order-eureka-client-ribbon-feign.iml" filepath="$PROJECT_DIR$/order-eureka-client-ribbon-feign/order-eureka-client-ribbon-feign.iml" />
       <module fileurl="file://$PROJECT_DIR$/order-eureka-client-ribbon-feign-hystrix-dashboard/order-eureka-client-ribbon-feign-hystrix-dashboard.iml" filepath="$PROJECT_DIR$/order-eureka-client-ribbon-feign-hystrix-dashboard/order-eureka-client-ribbon-feign-hystrix-dashboard.iml" />
       <module fileurl="file://$PROJECT_DIR$/simple-eureka-zuul/simple-eureka-zuul.iml" filepath="$PROJECT_DIR$/simple-eureka-zuul/simple-eureka-zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-simple-gateway/spring-cloud-simple-gateway.iml" filepath="$PROJECT_DIR$/spring-cloud-simple-gateway/spring-cloud-simple-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud.iml" filepath="$PROJECT_DIR$/springcloud.iml" />
       <module fileurl="file://$PROJECT_DIR$/user-eureka-client/user-eureka-client.iml" filepath="$PROJECT_DIR$/user-eureka-client/user-eureka-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/user-eureka-client-ribbon/user-eureka-client-ribbon.iml" filepath="$PROJECT_DIR$/user-eureka-client-ribbon/user-eureka-client-ribbon.iml" />

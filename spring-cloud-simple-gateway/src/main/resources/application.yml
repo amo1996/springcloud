@@ -1,18 +1,64 @@
 server:
   port: 8000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+#      是否与服务注册于发现组件进行结合，通过 serviceId 转发到具体的服务实例。
+#     默认为 false，设为 true 便开启通过服务中心的自动根据 serviceId 创建路由的功能。
 spring:
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
+# 没有配置路由规则会默认根据serviceId 创建路由
+# 现在eureka 上面有一个 USER-PROVIDER 的服务
+# 访问localhost:8000/USER-PROVIDER/hello  会访问  USER-PROVIDER 的hello 接口
+
+#下面这个作用是增加一个请求参数 name=lz  过滤器的方式
+#uri 是提供服务的地址 直接访问 localhost:8082/addRequest name=null
+#访问 localhost:8000/addRequest 会跳转至8082/addRequest 并且携带参数name=lz
+# 配置具体地址 只追对一个服务
+#配置lb协议以及服务名 会针对所有该服务名的服务，并且会负载均衡的访问(轮询)
+
+#这里其实默认使用了全局过滤器 LoadBalancerClient ，
+#当路由配置中 uri 所用的协议为 lb 时（以uri: lb://user-provider为例）
+#gateway 将使用 LoadBalancerClient 把 user-provider
+#通过 eureka 解析为实际的主机和端口，并进行负载均衡。
       routes:
-         - id: simple-route
-           uri: http://www.baidu.com
-           predicates:
-             - Path=/springcloud
+        - id: add_request_parameter_filters
+#          uri: http://localhost:8082
+#         uri: lb://应用服务名(serviceId)
+          uri: lb://user-provider
+          filters:
+          - AddRequestParameter=name,lz
+          predicates:
+          - Method=GET
+  application:
+    name: cloud-gateway
+logging:
+  level:
+    org.springframework.cloud.gateway: debug
+
+
+
+
+#  ---------------  simple spring cloud gateway
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#         - id: simple-route
+#           uri: http://www.baidu.com
+#           predicates:
+#             - Path=/springcloud
 
 #         id: 自定义的路由ID,应保持唯一
 #         uri:目标服务地址
 #         predicates:路由条件，接收一个输入参数 返回一个布尔值结果。
 #         filters:过滤规则
 #   上面这个配置 当访问localhost:8000/springcloud  会跳转到http://www.baidu.com/springcloud
+
 
 
