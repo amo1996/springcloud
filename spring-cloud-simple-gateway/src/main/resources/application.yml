@@ -1,0 +1,18 @@
+server:
+  port: 8000
+spring:
+  cloud:
+    gateway:
+      routes:
+         - id: simple-route
+           uri: http://www.baidu.com
+           predicates:
+             - Path=/springcloud
+
+#         id: 自定义的路由ID,应保持唯一
+#         uri:目标服务地址
+#         predicates:路由条件，接收一个输入参数 返回一个布尔值结果。
+#         filters:过滤规则
+#   上面这个配置 当访问localhost:8000/springcloud  会跳转到http://www.baidu.com/springcloud
+
+
